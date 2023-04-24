@@ -4,7 +4,7 @@
 
 ---
 
-
+Foodforthought is a website dedicated to all things food and produce. You can create an account, login and add/checkout items from the cart. Or you can just browse. Whatever you like :)
 
 ===
 
@@ -12,7 +12,7 @@
 
 ---
 
-Demo: PUT_SITE_URL_HERE
+Demo: https://prismatic-syrniki-d4598f.netlify.app/
 
 ===
 
@@ -20,7 +20,7 @@ Demo: PUT_SITE_URL_HERE
 
 ---
 
-## Started Developement - 
+## Started Developement - 4/24/2023
 
 ## Ended Development -
 
