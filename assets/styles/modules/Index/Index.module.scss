@@ -3,8 +3,21 @@
 @import "../../tools/themes/themes.scss";
 @import "../../tools/variables/variable.scss";
 
-// Desktop 
+// Fonts
+@font-face {
+  font-family: "Inter Regular";
+  src: url("../../../fonts/Inter-Regular.ttf");
+}
+@font-face {
+  font-family: "Inter Medium";
+  src: url("../../../fonts/Inter-Medium.ttf");
+}
+@font-face {
+  font-family: "Inter Bold";
+  src: url("../../../fonts/Inter-Bold.ttf");
+}
 
+// Desktop
 
 // Responsive
 @media all and (max-width: 1995px) {

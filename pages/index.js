@@ -7,15 +7,19 @@ import { useRouter } from "next/router";
 // Data/Functions/Images Imports
 
 // Component Imports
+import { PageHead } from "@/assets/components/global/PageHead";
 
 // Style Imports
 import "../assets/styles/modules/Index/Index.module.css";
 
 export default function Home() {
-
   const router = useRouter();
 
   return (
-    ""
-  )
+    <div id="PAGE" className="page index-page overrides_Index">
+      <PageHead />
+
+      <main id="PAGE_CNT"></main>
+    </div>
+  );
 }

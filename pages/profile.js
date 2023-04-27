@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 // Data/Functions/Images Imports
 
 // Component Imports
+import { PageHead } from "@/assets/components/global/PageHead";
 
 // Style Imports
 import "../assets/styles/modules/Profile/Profile.module.css";
@@ -14,5 +15,11 @@ import "../assets/styles/modules/Profile/Profile.module.css";
 export default function Profile() {
   const router = useRouter();
 
-  return "";
+  return (
+    <div id="PAGE" className="page profile-page overrides_Profile">
+      <PageHead />
+
+      <main id="PAGE_CNT"></main>
+    </div>
+  );
 }
