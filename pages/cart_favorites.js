@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 // Library Imports
 
 // Data/Functions/Images Imports
+import { TriggerExitAnimations } from "@/assets/functions/dom/triggers/TriggerExitAnimations";
 
 // Component Imports
 import { PageHead } from "@/assets/components/global/PageHead";
@@ -17,6 +18,11 @@ import "../assets/styles/modules/Cart_Favorites/Cart_Favorites.module.css";
 
 export default function Cart_Favorites() {
   const router = useRouter();
+
+  // Exit Animations trigger
+  useEffect(() => {
+    TriggerExitAnimations();
+  }, []);
 
   return (
     <div id="PAGE" className="page cart-favorites-page overrides_CartFavorites">
