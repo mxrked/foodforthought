@@ -4,6 +4,9 @@
  *
  */
 
+import { MdAccountCircle } from "react-icons/md";
+import { FaHeart, FaSearch, FaShoppingCart } from "react-icons/fa";
+
 import styles from "../../../../styles/modules/Nav/Nav.module.css";
 
 export const DesktopNav = () => {
@@ -37,10 +40,75 @@ export const DesktopNav = () => {
                         <span>home</span>
                       </a>
                     </li>
+                    <li>
+                      <a href="/products" className="half-second products-link">
+                        <span>products</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/info" className="half-second info-link">
+                        <span>info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/contact" className="half-second contact-link">
+                        <span>contact</span>
+                      </a>
+                    </li>
                   </ul>
                 </div>
 
-                <div className={`${styles.nav_side_links}`}></div>
+                <div className={`${styles.nav_side_links}`}>
+                  <ul>
+                    <li>
+                      <a
+                        className="half-second"
+                        onClick={(e) => {
+                          if (sessionStorage.getItem("Logged In User")) {
+                            e.currentTarget.href = "/profile";
+                          }
+
+                          if (!sessionStorage.getItem("Logged In User")) {
+                            e.currentTarget.href = "/login_register";
+                          }
+                        }}
+                      >
+                        <MdAccountCircle className={styles.icon} />
+                      </a>
+                    </li>
+                    <li>
+                      <button className="half-second search-toggler">
+                        <FaSearch className={`${styles.icon}`} />
+                      </button>
+                    </li>
+                    <li>
+                      <a
+                        href="/cart_favorites#favorites"
+                        className="cart-favorites-link half-second"
+                      >
+                        <FaHeart className={`${styles.icon}`} />
+
+                        <div className="half-second">
+                          <span className="half-second favorites-counter">
+                            0
+                          </span>
+                        </div>
+                      </a>
+                    </li>{" "}
+                    <li>
+                      <a
+                        href="/cart_favorites#cart"
+                        className="cart-favorites-link half-second"
+                      >
+                        <FaShoppingCart className={`${styles.icon}`} />
+
+                        <div className="half-second">
+                          <span className="half-second cart-counter">0</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
