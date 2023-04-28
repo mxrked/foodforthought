@@ -8,6 +8,9 @@ import { useRouter } from "next/router";
 
 // Component Imports
 import { PageHead } from "@/assets/components/global/PageHead";
+import { DesktopNav } from "@/assets/components/global/Nav/Desktop/DesktopNav";
+import { MobileNav } from "@/assets/components/global/Nav/Mobile/MobileNav";
+import { MobileNavMenu } from "@/assets/components/global/Nav/Mobile/MobileNavMenu";
 
 // Style Imports
 import "../assets/styles/modules/Cart_Favorites/Cart_Favorites.module.css";
@@ -18,6 +21,10 @@ export default function Cart_Favorites() {
   return (
     <div id="PAGE" className="page cart-favorites-page overrides_CartFavorites">
       <PageHead />
+
+      <DesktopNav />
+      <MobileNav />
+      <MobileNavMenu />
 
       <main id="PAGE_CNT"></main>
     </div>
