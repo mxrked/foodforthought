@@ -34,13 +34,5 @@ export default function CheckMobileNavMenuStatus() {
         }
       }
     }
-
-    // If modal opened
-    if (!sessionStorage.getItem("Mobile Nav Opened")) {
-      if (!sessionStorage.getItem("Search Opened")) {
-        document.body.style.overflowY = "hidden";
-        document.body.style.pointerEvents = "none";
-      }
-    }
   }
 }
