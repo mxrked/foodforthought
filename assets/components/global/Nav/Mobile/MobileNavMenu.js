@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa";
 
 import CloseMobileNavMenu from "@/assets/functions/dom/closers/CloseMobileNavMenu";
+import ToggleSearch from "@/assets/functions/dom/togglers/ToggleSearch";
 
 import styles from "../../../../styles/modules/Nav/Nav.module.css";
 
@@ -71,6 +72,9 @@ export const MobileNavMenu = () => {
 
                 <button
                   className={`${styles.search_toggler} half-second search-toggler`}
+                  onClick={() => {
+                    ToggleSearch();
+                  }}
                 >
                   <FaSearch className={`${styles.icon}`} />
                 </button>
