@@ -36,12 +36,36 @@ export const DesktopNav = () => {
   // Changing LoginRegisterProfile link based on if the user is logged in or not
   useEffect(() => {
     if (sessionStorage.getItem("Logged In User")) {
-      document.getElementById("loginRegisterProfileLink").href = "/profile";
+      document.getElementById("loginRegisterProfileLink_D").href = "/profile";
     }
 
     if (!sessionStorage.getItem("Logged In User")) {
-      document.getElementById("loginRegisterProfileLink").href =
+      document.getElementById("loginRegisterProfileLink_D").href =
         "/login_register";
+    }
+  }, []);
+
+  // Changing color of disabled nav link
+  useEffect(() => {
+    const INDEX_NAV_LINK = document.querySelector(".index-nav-link-D");
+    const PRODUCTS_NAV_LINK = document.querySelector(".products-nav-link-D");
+    const INFO_NAV_LINK = document.querySelector(".info-nav-link-D");
+    const CONTACT_NAV_LINK = document.querySelector(".contact-nav-link-D");
+
+    if (router.pathname == "/") {
+      INDEX_NAV_LINK.style.color = "#ff9a00";
+    }
+
+    if (router.pathname == "/products") {
+      PRODUCTS_NAV_LINK.style.color = "#ff9a00";
+    }
+
+    if (router.pathname == "/info") {
+      INFO_NAV_LINK.style.color = "#ff9a00";
+    }
+
+    if (router.pathname == "/contact") {
+      CONTACT_NAV_LINK.style.color = "#ff9a00";
     }
   }, []);
 
@@ -62,7 +86,7 @@ export const DesktopNav = () => {
               >
                 <div className={`${styles.desktop_nav_inner_side_cnt}`}>
                   <div className={`${styles.logo}`}>
-                    <a href="/" className="half-second index-link">
+                    <a href="/" className="half-second index-link nav-link">
                       <span>foodforthought</span>
                     </a>
                   </div>
@@ -75,14 +99,17 @@ export const DesktopNav = () => {
                   <div className={`${styles.nav_main_links}`}>
                     <ul>
                       <li>
-                        <a href="/" className="half-second nav-link index-link">
+                        <a
+                          href="/"
+                          className="half-second index-link nav-link index-nav-link-D"
+                        >
                           <span>home</span>
                         </a>
                       </li>
                       <li>
                         <a
                           href="/products"
-                          className="half-second nav-link products-link"
+                          className="half-second nav-link products-link products-nav-link-D"
                         >
                           <span>products</span>
                         </a>
@@ -90,7 +117,7 @@ export const DesktopNav = () => {
                       <li>
                         <a
                           href="/info"
-                          className="half-second nav-link info-link"
+                          className="half-second nav-link info-link info-nav-link-D"
                         >
                           <span>info</span>
                         </a>
@@ -98,7 +125,7 @@ export const DesktopNav = () => {
                       <li>
                         <a
                           href="/contact"
-                          className="half-second nav-link contact-link"
+                          className="half-second nav-link contact-link contact-nav-link-D"
                         >
                           <span>contact</span>
                         </a>
@@ -116,7 +143,7 @@ export const DesktopNav = () => {
                       <li>
                         <a
                           href=""
-                          id="loginRegisterProfileLink"
+                          id="loginRegisterProfileLink_D"
                           className={`${styles.login_register_profile} nav-link profile-link half-second`}
                         >
                           <MdAccountCircle className={styles.icon} />
