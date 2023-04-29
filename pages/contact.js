@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 
 // Data/Functions/Images Imports
 import { TriggerExitAnimations } from "@/assets/functions/dom/triggers/TriggerExitAnimations";
+import ManipPageLink from "@/assets/functions/dom/manip/ManipPageLinks";
 
 // Component Imports
 import { PageHead } from "@/assets/components/global/PageHead";
@@ -22,6 +23,11 @@ export default function Contact() {
   // Exit Animations trigger
   useEffect(() => {
     TriggerExitAnimations();
+  }, []);
+
+  // Disabling Page Link(s)
+  useEffect(() => {
+    ManipPageLink("disable", "multiple", ".contact-link");
   }, []);
 
   return (
