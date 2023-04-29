@@ -5,7 +5,7 @@
  */
 
 import DeclareStorageVariable from "../../data/storage/DeclareStorageVariable";
-// import CloseMobileNav from "../closers/CloseMobileNav";
+import CloseMobileNavMenu from "../closers/CloseMobileNavMenu";
 // import CloseSearch from "../closers/CloseSearch";
 
 function TriggerExitAnimations() {
@@ -49,26 +49,26 @@ function TriggerExitAnimations() {
         DeclareStorageVariable("session", "HREF", link.href);
 
         // Closing the mobile nav and search
-        // CloseMobileNav();
+        CloseMobileNavMenu();
         // CloseSearch();
 
         // Disabling pointer events and scrolling
         setTimeout(() => {
           document.body.style.overflowY = "hidden";
           document.body.style.pointerEvents = "none";
-        }, 1000);
+        }, 2300);
 
         // Hiding elements
         setTimeout(() => {
           document.querySelectorAll(".fm-motion").forEach((fm) => {
             fm.style.opacity = 0;
           });
-        }, 1020);
+        }, 2320);
 
         // Route to href value
         setTimeout(() => {
           window.location.href = sessionStorage.getItem("HREF");
-        }, 1500);
+        }, 2400);
       });
     }
   });
