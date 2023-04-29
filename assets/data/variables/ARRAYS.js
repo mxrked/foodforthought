@@ -24,14 +24,50 @@ const PRODUCTS_KWS = [
   "products page",
   "store page",
   "produce",
-  "fruits",
-  "vegetables",
-  "meats",
-  "desserts",
   "foods",
   "food page",
   "foods page",
   "food page",
+];
+const FRUIT_KWS = [
+  "fruits",
+  "fruit products",
+  "all fruits",
+  "view fruits",
+  "fruit",
+  "fruit products",
+  "all fruit",
+  "view fruit",
+];
+const VEGETABLE_KWS = [
+  "vegetables",
+  "vegetables products",
+  "all vegetables",
+  "view vegetables",
+  "vegetable",
+  "vegetable products",
+  "all vegetable",
+  "view vegetable",
+];
+const MEAT_KWS = [
+  "meats",
+  "meats products",
+  "all meats",
+  "view meats",
+  "meat",
+  "meat products",
+  "all meat",
+  "view meat",
+];
+const DESSERT_KWS = [
+  "desserts",
+  "desserts products",
+  "all desserts",
+  "view desserts",
+  "dessert",
+  "dessert products",
+  "all dessert",
+  "view dessert",
 ];
 const INFO_KWS = [
   "info",
@@ -73,6 +109,10 @@ export {
   FAVORITES,
   INDEX_KWS,
   PRODUCTS_KWS,
+  FRUIT_KWS,
+  VEGETABLE_KWS,
+  MEAT_KWS,
+  DESSERT_KWS,
   INFO_KWS,
   CONTACT_KWS,
 };
