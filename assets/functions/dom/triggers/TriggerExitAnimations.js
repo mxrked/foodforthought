@@ -6,7 +6,7 @@
 
 import DeclareStorageVariable from "../../data/storage/DeclareStorageVariable";
 import CloseMobileNavMenu from "../closers/CloseMobileNavMenu";
-// import CloseSearch from "../closers/CloseSearch";
+import CloseSearch from "../closers/CloseSearch";
 
 function TriggerExitAnimations() {
   document.querySelectorAll("a").forEach((link) => {
@@ -50,7 +50,7 @@ function TriggerExitAnimations() {
 
         // Closing the mobile nav and search
         CloseMobileNavMenu();
-        // CloseSearch();
+        CloseSearch();
 
         // Disabling pointer events and scrolling
         setTimeout(() => {
