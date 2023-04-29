@@ -71,13 +71,11 @@ export const MobileNav = () => {
                         <MdAccountCircle className={styles.icon} />
                       </a>
                     </li>
-                    */}
                     <li>
                       <button className="half-second search-toggler">
                         <FaSearch className={`${styles.icon}`} />
                       </button>
                     </li>
-                    {/**
                     <li className={`${styles.favorites}`}>
                       <a
                         href="/cart_favorites#favorites"
